@@ -11,33 +11,33 @@ Exercise:
 
 + 练习 1：预配 Azure 容器注册表 (ACR) 和 Azure Kubernetes 服务 (AKS)。
 + 练习 2：生成 Linux 和 Windows 容器映像并将其存储在 Azure 容器注册表中。
-+ 练习 3：将容器映像部署到 Azure Kubernetes 服务。
++ **练习 3：** 将容器映像部署到 Azure Kubernetes 服务。
 + 练习 4：查看部署并取消预配所有资源。
 
 在本练习中，将容器映像部署到 Azure Kubernetes 服务。
 
 ## 练习 3：将容器映像部署到 AKS 
 在本练习中，你要将在本练习前面创建的两个容器映像部署到 AKS 群集。
->注意：为了完成本练习，你将需要一个 [Azure 订阅](https://azure.microsoft.com/free/)。
+>注意：为了完成本练习，你将需要一个 [Azure 订阅](https://azure.microsoft.com/free/)****。
 > 对于未指定的任何属性，请使用默认值。
-> 注意：在继续本练习之前，请确保 AKS 群集的预配已成功完成。
+> **注意：** 在继续本练习之前，请确保 AKS 群集的预配已成功完成。
 
 ### 任务 1：创建自定义 AKS 命名空间
 在此任务中，你将在本实验室前面创建的 AKS 群集上创建两个命名空间。
 
-1. 在 Azure 门户的“搜索”文本框中，搜索并选择“Kubernetes 服务” 。
-1. 在“Kubernetes 服务”页上，选择“aks-01” 。
-1. 在 aks-01 页的垂直中心菜单中选择“命名空间” 。
-1. 在“aks-01 \| 命名空间”页上，选择“+ 创建”，然后在下拉菜单中选择“命名空间”  。
-1. 在“创建命名空间”窗格的“名称”文本框中，输入 dev-node 并选择“创建”   。
-1. 在“aks-01 \| 命名空间”页上，选择“+ 创建”，然后在下拉菜单中选择“命名空间”  。
-1. 在“创建命名空间”窗格的“名称”文本框中，输入 dev-dotnet 并选择“创建”   。
+1. 在 Azure 门户的“**搜索**”文本框中，搜索并选择“**Kubernetes 服务**”。
+1. 在“Kubernetes 服务”页上，选择“aks-01”********。
+1. 在 aks-01 页的垂直中心菜单中选择“命名空间”********。
+1. 在“aks-01 \| 命名空间”页上，选择“+ 创建”，然后在下拉菜单中选择“命名空间”************。
+1. 在“创建命名空间”窗格的“名称”文本框中，输入 dev-node 并选择“创建”****************。
+1. 在“aks-01 \| 命名空间”页上，选择“+ 创建”，然后在下拉菜单中选择“命名空间”************。
+1. 在“创建命名空间”窗格的“名称”文本框中，输入 dev-dotnet 并选择“创建”****************。
 
 ### 任务 2：创建用于部署 Linux 映像的 Kubernetes 清单
 在此任务中，你将创建一个 Kubernetes 清单，用于将 Linux 映像部署到 Linux 节点池
 
 1. 在 Azure 门户中，选择 Cloud Shell 图标。
-1. 确保 Cloud Shell 窗格左上角的下拉菜单中出现“Bash”。
+1. 确保 Cloud Shell 窗格左上角的下拉菜单中出现“Bash”****。
 1. 在 Azure Cloud Shell 的 Bash 会话中，创建一个目录，该目录将托管用于基于 Linux 映像预配 Pod 的部署清单，然后通过运行以下命令从当前目录更改为该目录：
 
    ```bash
@@ -91,10 +91,10 @@ Exercise:
        app: hellofromnode
    ```
 
-   > 注意：部署将基于 Linux 容器映像在 AKS 群集中的 Linux 节点池中创建 Pod。 此外，该清单还包含一个服务，该服务将通过端口 80 上的公共 IP 地址提供对部署中的 Pod 的负载均衡访问。
+   > 注意：部署将基于 Linux 容器映像在 AKS 群集中的 Linux 节点池中创建 Pod****。 此外，该清单还包含一个服务，该服务将通过端口 80 上的公共 IP 地址提供对部署中的 Pod 的负载均衡访问。
 
 1. 保存对文件的更改并关闭它，回到 Bash 提示符。
-1. 在 Azure Cloud Shell 的 Bash 会话中，通过运行以下命令替换文件 aks-deployment-l01.yaml 中的 ACR_NAME 占位符：
+1. 在 Azure Cloud Shell 的 Bash 会话中，通过运行以下命令替换文件 aks-deployment-l01.yaml 中的 ACR_NAME 占位符****：
 
    ```azurecli
    ACR_RGNAME='acr-01-RG'
@@ -158,10 +158,10 @@ Exercise:
        app: hellofromdotnet
    ```
 
-   > 注意：该部署将基于 Windows 容器映像在 AKS 群集中的 Windows 节点池中创建 Pod。 此外，该清单还包含一个服务，该服务将通过端口 80 上的公共 IP 地址提供对部署中的 Pod 的负载均衡访问。
+   > 注意：该部署将基于 Windows 容器映像在 AKS 群集中的 Windows 节点池中创建 Pod****。 此外，该清单还包含一个服务，该服务将通过端口 80 上的公共 IP 地址提供对部署中的 Pod 的负载均衡访问。
 
 1. 保存对文件的更改并关闭它，回到 Bash 提示符。
-1. 在 Azure Cloud Shell 的 Bash 会话中，通过运行以下命令替换文件 aks-deployment-l01.yaml 中的 ACR_NAME 占位符：
+1. 在 Azure Cloud Shell 的 Bash 会话中，通过运行以下命令替换文件 aks-deployment-l01.yaml 中的 ACR_NAME 占位符：****
 
    ```azurecli
    sed -i "s/ACR_NAME/$ACR_NAME/" ./aks-deployment-w01.yaml
@@ -184,16 +184,16 @@ Exercise:
    kubectl get nodes
    ```
 
-   > 注意：命令的输出应包括所有 AKS 节点（本例中为四个）的列表。
+   > 注意：命令的输出应包括所有 AKS 节点（本例中为四个）的列表****。
 
-1. 在 Azure Cloud Shell 的 Bash 会话中，运行以下命令，在 dev-node 命名空间的相应 YAML 清单文件中创建定义的第一个部署：
+1. 在 Azure Cloud Shell 的 Bash 会话中，运行以下命令，在 dev-node 命名空间的相应 YAML 清单文件中创建定义的第一个部署：****
 
    ```kubectl
    cd ~/aks-l01
    kubectl apply -f aks-deployment-l01.yaml -n=dev-node
    ```
 
-   > 注意：继续执行下一步，无需等待部署完成。 预配所有资源可能需要几分钟时间。
+   > 注意：继续执行下一步，无需等待部署完成****。 预配所有资源可能需要几分钟时间。
 
 1. 在 Azure Cloud Shell 的 Bash 会话中，运行以下命令，创建在相应的 YAML 清单文件中定义的第二个部署：
 
@@ -202,5 +202,5 @@ Exercise:
    kubectl apply -f aks-deployment-w01.yaml -n=dev-dotnet
    ```
 
-   > 注意：继续执行下一步，无需等待部署完成。 预配所有资源可能需要几分钟时间。
+   > 注意：继续执行下一步，无需等待部署完成****。 预配所有资源可能需要几分钟时间。
 
