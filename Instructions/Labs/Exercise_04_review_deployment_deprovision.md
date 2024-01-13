@@ -19,7 +19,7 @@ Exercise:
 # 练习 4：查看部署并取消预配所有资源
 在本练习中，你将查看部署的结果并取消预配所有资源。
 
->**注意**：为了完成本练习，你将需要一个 [Azure 订阅](https://azure.microsoft.com/free/)。
+>注意：为了完成本练习，你将需要一个 [Azure 订阅](https://azure.microsoft.com/free/)****。
 > 对于未指定的任何属性，请使用默认值。
 
 ### 任务 1：查看 AKS 部署和服务
@@ -41,7 +41,7 @@ Exercise:
    kubectl get services -n=dev-dotnet
    ```
 
-1. 验证列出的每个服务是否在 EXTERNAL-IP 列中包含值。 
+1. 验证列出的每个服务是否在 EXTERNAL-IP 列中包含值****。 
 1. 使用 Web 浏览器导航到你在上一步中确定的 IP 地址，然后验证生成的网页是否分别显示 **Hello World from Node** 和 **Hello World from .Net 7** 消息。
 
 ### 任务 2：删除所有资源
