@@ -1,3 +1,5 @@
+**本课程将于 2024 年 7 月 31 日停用****。课程停用后，将移除所有 GitHub 存储库。谢谢。**
+
 # 使用 Azure Kubernetes 服务部署和管理容器
 
 此存储库包含完成 Microsoft Learn 上《使用 Azure Kubernetes 服务部署和管理容器》学习路径中的练习所需的说明和资产。
