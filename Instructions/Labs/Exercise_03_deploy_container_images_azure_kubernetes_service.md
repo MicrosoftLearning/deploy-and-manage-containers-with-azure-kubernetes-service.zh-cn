@@ -10,7 +10,7 @@ Exercise:
 此引导项目包括以下练习：
 
 + 练习 1：预配 Azure 容器注册表 (ACR) 和 Azure Kubernetes 服务 (AKS)。
-+ 练习 2：生成 Linux 和 Windows 容器映像并将其存储在 Azure 容器注册表中。
++ 练习 2：生成 Linux 和 Windows 容器映像并将其存储在 Azure 容器注册表。
 + **练习 3：** 将容器映像部署到 Azure Kubernetes 服务。
 + 练习 4：查看部署并取消预配所有资源。
 
